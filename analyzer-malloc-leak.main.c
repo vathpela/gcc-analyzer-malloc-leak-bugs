@@ -48,6 +48,15 @@ main(void)
 	free(buf1);
 #endif /* defined(CALL_TEST1) */
 
+#if defined(CALL_TEST2)
+	int rc2;
+	list_t head2 = LIST_HEAD_INIT(head2);
+
+	rc2 = no_leak_2(strings, 2, &head2);
+	if (rc2 < 0)
+		errx(1, "no_leak_2 broke");
+#endif /* defined(CALL_TEST2) */
+
 	return 0;
 }
 
