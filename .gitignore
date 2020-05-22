@@ -1,0 +1,6 @@
+*~
+.sw?
+.*.sw?
+*.lto
+*.o
+analyzer-malloc-leak
